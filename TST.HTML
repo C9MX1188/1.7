@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اكس عفط</title>
+    <link rel="stylesheet" href="TST.css" />
+    <link rel="icon" href="icons/ca5f34f28c0bbd17.png" />
+  </head>
+  <body>
+    <script>
+      window.addEventListener("beforeunload", (event) => {
+        event.preventDefault();
+        event.returnValue = "";
+      });
+    </script>
+    <!--       <div id="prelloader"></div>   شغلته بس عشان شاشت لودنق  -->
+    <div id="prelloader">
+      <video autoplay loop muted plays-inline no-repeat>
+        <source src="img/IMG_6754.MP4" type="video/mp4" />
+      </video>
+    </div>
+    <header class="header">
+      <nav>
+        <ul class="ul1">
+          <li class="li1">
+            <a class="a1 dropdown" href="#">شروحات السيرفر</a>
+            <div class="sub-content">
+              <div class="sub-drop">
+                <ul>
+                  <li class="li2">
+                    <a href="index.html #gem">متطلبات اللعبة</a>
+                  </li>
+                  <li class="li2">
+                    <a href="index.html #Explanations">شرح وظيفة </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="li1">
+            <a class="a1" href="shop.html">المتجر</a>
+          </li>
+
+          <li class="li1">
+            <a href="index.html #home">
+              <img
+                class="icon"
+                style="width: 200px"
+                src="icons/223.png"
+                alt=""
+              />
+            </a>
+          </li>
+
+          <li class="li1">
+            <a class="a1" href="index.html">الرئيسية</a>
+          </li>
+          <li class="li1">
+            <a class="a1 dropdown" href="#">السيرفر᲼مـعـلـومـة </a>
+            <div class="sub-content">
+              <div class="sub-drop">
+                <ul>
+                  <li class="li2">
+                    <a href="#Server-information">مـعـلـومـة</a>
+                  </li>
+                  <li class="li2">
+                    <a href="index.html #contact2">نضام التفعيل </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="li1">
+            <a class="a1 dropdown" href="#">تواصل </a>
+            <div class="sub-content">
+              <div class="sub-drop">
+                <ul>
+                  <li class="li2">
+                    <a href="https://discord.gg/5SXqpMydxB">discord</a>
+                  </li>
+                  <li class="li2">
+                    <a href="index.html #contact">الدعم الفني</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- ... الهيكل السابق ... -->
+
+    <div class="home">
+      <div class="control-div">
+        <div id="countdown"></div>
+        <div class="main" style="display: none">
+          <!--1-->
+          <div class="question">
+            <p>
+              1.هل مسمو طلب الأدمن لتنزيل السيارات للاعب أو لأعطاء فلوس للاعب
+            </p>
+            <div class="options">
+              <label><input type="radio" name="q1" id="q1-b" /> صح</label>
+              <label><input type="radio" name="q1" id="q1-a" /> خطأ</label>
+            </div>
+            <!--2-->
+            <p>2. تصتطيع سرقة أغراض المسعفين</p>
+            <div class="options">
+              <label><input type="radio" name="q2" id="q2-a" /> صح</label>
+              <label><input type="radio" name="q2" id="q2-b" /> خطأ</label>
+            </div>
+
+            <!--3-->
+            <p>3.الحد الأعلى , لعدد المواطنين بسرقة .. ( البقالة )</p>
+            <div class="options">
+              <label><input type="radio" name="q3" id="q3-b" /> 6</label>
+              <label><input type="radio" name="q3" id="q3-a" /> 4</label>
+              <label><input type="radio" name="q3" id="q3-c" /> 3</label>
+            </div>
+
+            <!--4-->
+            <p>4.هل تصتطيع أستعمال أو سرقة ( الطيارات والهيلكوبتر )</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="q4" id="q4-b" /> للمواطنين فقط</label
+              >
+              <label
+                ><input type="radio" name="q4" id="q4-a" /> بالسيرفر ممنوع بشكل
+                نهائي</label
+              >
+              <label><input type="radio" name="q4" id="q4-c" /> مسموح</label>
+            </div>
+
+            <!--5-->
+            <p>5.عند وجود أمامك ( تفتيش ) يجب عليك تخفيض السرعه تحت</p>
+            <div class="options">
+              <label><input type="radio" name="q5" id="q5-c" /> 50</label>
+              <label><input type="radio" name="q5" id="q5-b" /> 190</label>
+              <label><input type="radio" name="q5" id="q5-a" /> 100</label>
+            </div>
+
+            <!--6-->
+            <p>6. هل مسموح سرقة ( دبابات البوتات )</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="q6" id="q6-a" />بالسيرفر ممنوع بشكل
+                نهائي</label
+              >
+              <label><input type="radio" name="q6" id="q6-b" /> مسموح</label>
+              <label
+                ><input type="radio" name="q6" id="q6-c" /> للمواطنين فقط</label
+              >
+            </div>
+
+            <!--7-->
+            <p>7.الحد الأعلى , لعدد المواطنين بسرقة .. ( البنك )</p>
+            <div class="options">
+              <label><input type="radio" name="q7" id="q7-a" /> 7</label>
+              <label><input type="radio" name="q7" id="q7-b" /> 9</label>
+              <label><input type="radio" name="q7" id="q7-c" /> 6</label>
+            </div>
+
+            <!--8-->
+            <p>8. 2:</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="q8" id="q8-a" /> Dynamic pages</label
+              >
+              <label
+                ><input type="radio" name="q8" id="q8-b" /> Data
+                structures</label
+              >
+              <label
+                ><input type="radio" name="q8" id="q8-c" /> Web page
+                interface</label
+              >
+            </div>
+
+            <!--9-->
+            <p>9.هل سرقة ( مركبات البوتات )</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="q9" id="q9-b" /> ممنوع بشكل نهائي
+              </label>
+              <label
+                ><input type="radio" name="q9" id="q9-a" /> فقط خارج المدينة
+                الأولى
+              </label>
+            </div>
+
+            <!--10-->
+            <p>10. 2:</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="q10" id="q10-a" /> Dynamic
+                pages</label
+              >
+              <label
+                ><input type="radio" name="q10" id="q10-b" /> Data
+                structures</label
+              >
+              <label
+                ><input type="radio" name="q10" id="q10-c" /> Web page
+                interface</label
+              >
+            </div>
+
+            <!--11-->
+            <p>11. 2:</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="q11" id="q11-a" /> Dynamic
+                pages</label
+              >
+              <label
+                ><input type="radio" name="q11" id="q11-b" /> Data
+                structures</label
+              >
+              <label
+                ><input type="radio" name="q11" id="q11-c" /> Web page
+                interface</label
+              >
+            </div>
+
+            <!--12-->
+            <p>12. 2:</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="q12" id="q12-a" /> Dynamic
+                pages</label
+              >
+              <label
+                ><input type="radio" name="q12" id="q12-b" /> Data
+                structures</label
+              >
+              <label
+                ><input type="radio" name="q12" id="q12-c" /> Web page
+                interface</label
+              >
+            </div>
+
+            <!--13-->
+            <p>13. 2:</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="q13" id="q13-a" /> Dynamic
+                pages</label
+              >
+              <label
+                ><input type="radio" name="q13" id="q13-b" /> Data
+                structures</label
+              >
+              <label
+                ><input type="radio" name="q13" id="q13-c" /> Web page
+                interface</label
+              >
+            </div>
+
+            <!--14-->
+            <p>14. 2:</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="q14" id="q14-a" /> Dynamic
+                pages</label
+              >
+              <label
+                ><input type="radio" name="q14" id="q14-b" /> Data
+                structures</label
+              >
+              <label
+                ><input type="radio" name="q14" id="q14-c" /> Web page
+                interface</label
+              >
+            </div>
+
+            <!--15-->
+            <p>15. 2:</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="q15" id="q15-a" /> Dynamic
+                pages</label
+              >
+              <label
+                ><input type="radio" name="q15" id="q15-b" /> Data
+                structures</label
+              >
+              <label
+                ><input type="radio" name="q15" id="q15-c" /> Web page
+                interface</label
+              >
+            </div>
+
+            <!--16-->
+            <p>16. 2:</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="q16" id="q16-a" /> Dynamic
+                pages</label
+              >
+              <label
+                ><input type="radio" name="q16" id="q16-b" /> Data
+                structures</label
+              >
+              <label
+                ><input type="radio" name="q16" id="q16-c" /> Web page
+                interface</label
+              >
+            </div>
+
+            <!--17-->
+            <p>17. 2:</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="q17" id="q17-a" /> Dynamic
+                pages</label
+              >
+              <label
+                ><input type="radio" name="q17" id="q17-b" /> Data
+                structures</label
+              >
+              <label
+                ><input type="radio" name="q17" id="q17-c" /> Web page
+                interface</label
+              >
+            </div>
+
+            <!--18-->
+            <p>18. 2:</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="q18" id="q18-a" /> Dynamic
+                pages</label
+              >
+              <label
+                ><input type="radio" name="q18" id="q18-b" /> Data
+                structures</label
+              >
+              <label
+                ><input type="radio" name="q18" id="q18-c" /> Web page
+                interface</label
+              >
+            </div>
+
+            <!--19-->
+            <p>19. 2:</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="q19" id="q19-a" /> Dynamic
+                pages</label
+              >
+              <label
+                ><input type="radio" name="q19" id="q19-b" /> Data
+                structures</label
+              >
+              <label
+                ><input type="radio" name="q19" id="q19-c" /> Web page
+                interface</label
+              >
+            </div>
+
+            <!--20-->
+            <p>20. 2:</p>
+            <div class="options">
+              <label
+                ><input type="radio" name="q20" id="q20-a" /> Dynamic
+                pages</label
+              >
+              <label
+                ><input type="radio" name="q20" id="q20-b" /> Data
+                structures</label
+              >
+              <label
+                ><input type="radio" name="q20" id="q20-c" /> Web page
+                interface</label
+              >
+            </div>
+          </div>
+          <!-- Add more questions as needed... -->
+
+          <div id="resultPage" style="display: none">
+            <h1>نتيجة الاختبار</h1>
+            <p id="score">Your score is: <span id="resultScore"></span></p>
+            <div class="Retest">Retest</div>
+            <div class="success">success</div>
+          </div>
+        </div>
+        <div class="calculateResult">
+          <div id="startButton">
+            <h2>قوم بي ضغط لي بدء الاختبار</h2>
+            <h2>
+              الاختبار لا يقوم بي تفعيلك بل يقوم بي اخبار تجريبي قبل الاختبار
+              تفعيل الموجود في الدسكورد
+            </h2>
+
+            <button id="startButton" onclick="startCountdown()">
+              بدء الاختبار
+            </button>
+          </div>
+          <div id="Final button" style="display: none">
+            <h2>قوم بي ضغط بعد انتها من 20 سوال</h2>
+            <button onclick="calculateResult()">انهاء الاختبار</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

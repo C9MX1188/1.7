@@ -1,0 +1,428 @@
+:root {
+  --primarycolor: #000;
+  --secondarycolor: #4c0808;
+  --lightcolor: #dcdcdc;
+  --bgcolor-1: #1f1f1f;
+  --bgcolor-2: #111111;
+  --padding: 8%;
+}
+@font-face {
+  font-family: "x3f61";
+  src: url(font/OriginTech_personal_use.otf);
+}
+
+@font-face {
+  font-family: "x3f62";
+  src: url(font/ReemKufi-Regular-2_2.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--bgcolor-2);
+  font-size: 16px;
+  font-family: "x3f61", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+section {
+  padding: 4%;
+  width: 100%;
+  background-color: #00000000;
+}
+img {
+  max-width: 100%;
+}
+
+/*لودنق**/
+
+#prelloader {
+  background: var(--primarycolor) url(img/loading.gif) no-repeat center;
+  background-size: 30%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+}
+#prelloader video {
+  height: 100vh;
+  width: 100%;
+}
+
+/*بدايت صفحه */
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+  text-shadow: #000 0 0 5px;
+}
+.icon {
+  width: 120px;
+}
+.icon2 {
+  width: 700px;
+  margin-bottom: 00px;
+  z-index: 10;
+}
+/* سكرول */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(66, 4, 4);
+}
+
+/*ham*/
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00baf0;
+  background: linear-gradient(to left, #4c0808, #9d0101);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+  height: 50px;
+  padding: 1em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 701px) {
+  .li1 img {
+    display: none;
+  }
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+
+/* أسلوب القائمة */
+.header nav {
+  width: 100%;
+  position: absolute;
+  top: -150px;
+  left: 0;
+  padding: 20px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* أسلوب الروابط في القائمة */
+.header nav .ul1 {
+  list-style: none;
+  margin: 0;
+  padding: var(--padding);
+}
+.li1 {
+  display: inline-block;
+  margin-right: 30px;
+}
+.a1 {
+  color: #ffffff;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  font-size: 25px;
+  text-shadow: #000 0 0 5px;
+  font-weight: 800;
+  padding: 15px 20px; /* تعديل الpadding هنا */
+}
+.a1:hover {
+  color: var(--secondarycolor);
+}
+.a1:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #9d0101;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.a1:hover:after {
+  width: 100%;
+  left: 0;
+}
+.div2 {
+  text-align: center;
+}
+
+/* li تنسيق لحاوية القائمة المنسدلة */
+
+.li2 {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+/* تنسيق لحاوية القائمة المنسدلة */
+.sub-content {
+  top: 280px;
+  position: absolute;
+  overflow: hidden;
+  background-color: none;
+  box-shadow: #4c080861 0 0 5px;
+  max-height: 0;
+}
+
+.sub-content {
+  color: var(--lightcolor);
+  text-decoration: none;
+}
+
+/* تنسيق لمحتوى القائمة المنسدلة */
+.sub-drop {
+  padding: 0;
+}
+.sub-drop ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.sub-drop ul li a {
+  display: inline-block;
+  padding: 5px 10px;
+}
+.sub-drop ul li:hover {
+  background-color: #4c08082f;
+}
+/* تنسيق لعناصر القائمة المنسدلة */
+
+.a1:focus {
+  color: var(--secondarycolor);
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+/* إظهار محتوى القائمة المنسدلة عند التحويم */
+nav ul li:hover .sub-content {
+  max-height: 400px;
+  transition: max-height 1.5s ease-out;
+  -webkit-transition: max-height 1.5s ease-out;
+  -moz-transition: max-height 1.5s ease-out;
+}
+.home {
+  background: url(img/21fe6013067c7b74.png) no-repeat;
+  background-size: cover;
+  background-position: right;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.home .div1 {
+  text-align: center;
+  margin: auto;
+  margin-right: 500px;
+  height: auto;
+  z-index: 666;
+}
+
+.home a {
+  color: #ffffff;
+  margin-top: 90px;
+  border: 10px solid #4c0808;
+  background-color: #4c0808;
+  border-radius: 20%;
+}
+
+/*5*/
+#information5 {
+  background: url(img/2Desktop_Screenshot_2024.02.05_-_03.47.07.46.png)
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#information5 h4 {
+  margin-top: 130px;
+  margin-bottom: 20px;
+  color: var(--lightcolor);
+  font-size: 2.7em;
+  text-align: center;
+  text-shadow: #000 0 0 5px;
+}
+#information5 p {
+  background-color: rgba(0, 0, 0, 0.31);
+  color: var(--lightcolor);
+  margin-top: 10px;
+  font-weight: 800;
+  font-size: 1.9em;
+  text-shadow: #000 0 0 10px;
+  text-align: right;
+}
+/*4*/
+#information4 {
+  background: url(img/6.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#information4 h4 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: var(--lightcolor);
+  font-size: 2.9em;
+  text-align: center;
+  text-shadow: #000 0 0 5px;
+}
+#information4 p {
+  background-color: rgba(0, 0, 0, 0.31);
+  color: var(--lightcolor);
+  margin-top: 15px;
+  font-weight: 800;
+  font-size: 1.6em;
+  text-shadow: #000 0 0 10px;
+  text-align: right;
+}
+/*3*/
+
+#information3 {
+  background: url(img/image.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#information3 h4 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: var(--lightcolor);
+  font-size: 2.4em;
+  text-align: center;
+  text-shadow: #000 0 0 5px;
+}
+#information3 p {
+  color: var(--lightcolor);
+  margin-top: 10px;
+  font-weight: 800;
+  font-size: 1.4em;
+  text-shadow: #000 0 0 10px;
+  text-align: right;
+}
+/*2*/

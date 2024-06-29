@@ -1,0 +1,304 @@
+:root {
+  --primarycolor: #000;
+  --secondarycolor: #4c0808;
+  --lightcolor: #dcdcdc;
+  --bgcolor-1: #1f1f1f;
+  --bgcolor-2: #111111;
+  --padding: 8%;
+}
+
+@font-face {
+  font-family: "x3f61";
+  src: url(font/OriginTech_personal_use.otf);
+}
+
+@font-face {
+  font-family: "x3f62";
+  src: url(font/ReemKufi-Regular-2_2.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "x3f61", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+body {
+  background-color: var(--bgcolor-1);
+  color: var(--lightcolor);
+}
+
+#resultPage {
+  display: none;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#resultPage h2 {
+  color: var(--lightcolor);
+}
+
+#score {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/*لودنق**/
+
+#prelloader {
+  background: var(--primarycolor) url(img/loading.gif) no-repeat center;
+  background-size: 30%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+}
+#prelloader video {
+  height: 100vh;
+  width: 100%;
+}
+/*بدايت صفحه */
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.icon {
+  width: 120px;
+}
+.icon2 {
+  width: 700px;
+  margin-bottom: 00px;
+  z-index: 10;
+}
+/* سكرول */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(66, 4, 4);
+}
+/* أسلوب الهيدر */
+.header {
+  width: 100%;
+  position: sticky;
+  z-index: 999;
+  display: flex;
+  transition: background-color 0.5s ease; /* تأثير التحول على لون الخلفية */
+}
+
+/* أسلوب القائمة */
+.header nav {
+  width: 100%;
+  position: absolute;
+  top: -150px;
+  left: 0;
+  padding: 20px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* أسلوب الروابط في القائمة */
+.header nav .ul1 {
+  list-style: none;
+  margin: 0;
+  padding: var(--padding);
+}
+.li1 {
+  display: inline-block;
+  margin-right: 30px;
+}
+.a1 {
+  color: var(--lightcolor);
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  font-size: 25px;
+  text-shadow: var(--secondarycolor) 0 0 5px;
+  font-weight: 800;
+  padding: 15px 20px; /* تعديل الpadding هنا */
+}
+.a1:hover {
+  color: #9d0101;
+}
+.a1:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #9d0101;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.a1:hover:after {
+  width: 100%;
+  left: 0;
+}
+.div2 {
+  text-align: center;
+}
+
+/* li تنسيق لحاوية القائمة المنسدلة */
+
+.li2 {
+  font-size: 20px;
+  font-weight: 900;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+.li2 a {
+  color: var(--lightcolor);
+  text-shadow: var(--lightcolor) 0 0 5px;
+  text-shadow: var(--primarycolor);
+}
+/* تنسيق لحاوية القائمة المنسدلة */
+.sub-content {
+  position: absolute;
+  overflow: hidden;
+  background-color: none;
+  box-shadow: #4c080861 0 0 5px;
+  max-height: 0;
+}
+
+.sub-content {
+  text-decoration: none;
+}
+
+/* تنسيق لمحتوى القائمة المنسدلة */
+.sub-drop {
+  padding: 0;
+}
+.sub-drop ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.sub-drop ul li a {
+  display: inline-block;
+  padding: 5px 10px;
+}
+.sub-drop ul li:hover {
+  background-color: #4c08082f;
+}
+/* تنسيق لعناصر القائمة المنسدلة */
+
+.a1:focus {
+  color: var(--lightcolor);
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+/* إظهار محتوى القائمة المنسدلة عند التحويم */
+nav ul li:hover .sub-content {
+  max-height: 400px;
+  transition: max-height 1.5s ease-out;
+  -webkit-transition: max-height 1.5s ease-out;
+  -moz-transition: max-height 1.5s ease-out;
+}
+
+.home {
+  background: url(img/cfw4.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.main {
+  max-width: 900px; /* قمت بزيادة العرض لتحسين التنسيق */
+  margin: 0 auto;
+  color: var(--lightcolor);
+  background: transparent;
+  backdrop-filter: blur(20px);
+  padding: 30px;
+  border-radius: 10px;
+  border: var(--primarycolor) solid 2px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  height: 500px;
+  overflow: auto;
+}
+
+.question {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.control-div p {
+  font-size: 19px;
+  font-weight: 500;
+}
+.options label {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.options input {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 19px;
+}
+
+button {
+  padding: 15px 30px;
+  background-color: var(--primarycolor);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: var(--secondarycolor);
+}
+
+.control-div {
+  margin-top: 10%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.control-div button {
+  margin-left: 50%;
+  margin-right: 50%;
+}
+.control-div h2 {
+  font-size: 25px;
+  color: var(--lightcolor);
+  text-shadow: #000;
+  background-color: #2305056a;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* countdown */
+#countdown {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--lightcolor);
+  text-shadow: var(--secondarycolor);
+  background-color: #2305056a;
+  border-radius: 50%;
+  border: var(--primarycolor) 1px solid;
+}
